@@ -50,6 +50,8 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  align-items: center;
+  padding-block-end: 105px;
 }
 
 .card {
@@ -130,4 +132,71 @@
   font-size: 14px;
   line-height: 0.9;
   mix-blend-mode: difference;
+  font-weight: 400;
+}
+
+.button__save {
+  inline-size: 335px;
+  block-size: 55px;
+  padding: 0;
+  display: flex;
+  border: 2px solid #000;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.button__save svg {
+  width: 21px;
+  height: 21px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.button__save::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button__save:hover::before {
+  transform: scaleX(1);
+}
+
+.filter_brightness {
+  filter: brightness(200%);
+}
+
+.filter_contrast {
+  filter: contrast(40%);
+}
+
+.filter_grayscale {
+  filter: grayscale(0.8);
+}
+
+.filter_saturate {
+  filter: saturate(90%);
+}
+
+.filter_hue-rotate {
+  filter: hue-rotate(-90deg);
+}
+
+.filter_sepia {
+  filter: sepia(80%);
+}
+
+.filter_invert {
+  filter: invert(1);
+}
+
+.filter_multi {
+  filter: invert(1) hue-rotate(-60deg) grayscale(0.4) brightness(170%);
 }
