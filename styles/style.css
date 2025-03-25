@@ -68,12 +68,33 @@
 
 .card__image-wrapper {
   font-size: 0;
+  position: relative;
 }
 
 .card__image {
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
+}
+
+.card__image-label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-size: 14px;
+  font-family: var(--font-accent);
+  color: #000;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__image-label {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
 }
 
 .card__content-wrapper {
@@ -167,6 +188,36 @@
 
 .button__save:hover::before {
   transform: scaleX(1);
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-inline-size: 355px;
+  padding: 30px;
+  border: 2px solid #000;
+  gap: 30px;
+}
+
+.dialog__content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__image {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
+.dialog__title {
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
 }
 
 .filter_brightness {
