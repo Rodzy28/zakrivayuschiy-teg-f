@@ -34,12 +34,12 @@
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .core {
   fill: transparent;
-  transition: 0.3s 0.03s;
+  transition: 0.3s 0.03s linear;
 }
 
 .contour {
@@ -49,37 +49,37 @@
 
 .like-icon:hover .main-body {
   fill: var(--color-heart-main, #000);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:hover .core {
   fill: var(--color-heart-main, #000);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--color-heart-accent, #f00);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
   fill: var(--color-heart-accent, #f00);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart-accent, #f00);
-  transition: fill 0.3s 0.06s;
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--color-heart-accent, #f00);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--color-heart-accent, #f00);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .heart {
