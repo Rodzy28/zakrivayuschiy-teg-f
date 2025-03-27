@@ -49,8 +49,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   align-items: center;
+  gap: 50px;
   padding-block-end: 105px;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .card__image-wrapper {
-  font-size: 0;
   position: relative;
+  font-size: 0;
 }
 
 .card__image {
@@ -79,21 +79,21 @@
 
 .card__image-label {
   position: absolute;
+  opacity: 0.5;
+  color: #000;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-size: 14px;
-  font-family: var(--font-accent);
-  color: #000;
   mix-blend-mode: hard-light;
-  opacity: 0.5;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__image-label {
+    text-shadow: none;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
-    text-shadow: none;
   }
 }
 
@@ -162,10 +162,10 @@
 .button__text {
   color: #fff;
   font-family: var(--font-accent, "PressStart2P-Regular"), fantasy;
+  font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
   mix-blend-mode: difference;
-  font-weight: 400;
 }
 
 .text_uppercase {
@@ -187,9 +187,9 @@
 }
 
 .button__image {
+  color: #fff;
   block-size: 21px;
   inline-size: 21px;
-  color: #fff;
   mix-blend-mode: difference;
 }
 
@@ -197,11 +197,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-inline-size: 353px;
-  padding: 30px;
-  border: 2px solid #000;
   gap: 30px;
+  border: 2px solid #000;
+  padding: 30px;
   transition: 1s;
+  max-inline-size: 353px;
 }
 
 .dialog::backdrop {
@@ -210,22 +210,22 @@
 
 .dialog__content {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
 }
 
 .dialog__image {
+  flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
-  flex-shrink: 0;
 }
 
 .dialog__title {
   font-family: var(--font-accent);
-  text-transform: uppercase;
+  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .dialog__button {
@@ -266,9 +266,9 @@
 
 @media (width <= 375px) {
   .button__save {
+    flex-direction: column;
     inline-size: 306px;
     block-size: 84px;
-    flex-direction: column;
   }
 
   .button__image {
@@ -281,8 +281,8 @@
   }
 
   .dialog[open] {
-    max-inline-size: 341px;
     padding-inline-start: 40px;
     padding-inline-end: 40px;
+    max-inline-size: 341px;
   }
 }
